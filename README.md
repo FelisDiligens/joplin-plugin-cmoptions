@@ -1,6 +1,6 @@
 # Joplin CodeMirror options plugin
 
-This is a simple plugin that exposes some CodeMirror options to the user, such as line wrapping or line numbers.
+This is a simple plugin for [Joplin](https://joplinapp.org/) that exposes some CodeMirror options to the user, such as line wrapping or line numbers.
 
 See the screenshots below:
 
@@ -9,9 +9,19 @@ See the screenshots below:
 
 ## Installation
 
+### From the repo (recommended)
+
 - Go to the settings (Tools → Options) → Plugins
 - Search for CodeMirror Options
 - Click 'Install' and restart Joplin
+- Enjoy
+
+### Manually
+
+- Download the *.jpl file from the [releases](https://github.com/FelisDiligens/joplin-plugin-cmoptions/releases) section
+- Go to the settings (Tools → Options) → Plugins
+- Click the gear next to 'Manage your plugins' and choose 'Install from file'
+- Select the downloaded *.jpl file
 - Enjoy
 
 ## Usage
