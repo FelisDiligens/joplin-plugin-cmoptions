@@ -5,8 +5,8 @@
         </td>
     </tr>
     <tr>
-        <td rowspan="5" align="center">
-            <img src="./assets/joplin.svg" width="48"><br>
+        <td rowspan="6" align="center">
+            <img src="./assets/joplin.svg" width="64"><br>
             <p>
                 <strong>Joplin Plugin</strong><br>
                 CodeMirror options plugin
@@ -15,6 +15,12 @@
     </tr>
     <tr>
         <td colspan="2"><strong>Adds some CodeMirror options to Joplin's settings, such as line numbers and line wrapping.</strong></td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <img src="https://img.shields.io/npm/v/joplin-plugin-cmoptions?label=Version&style=for-the-badge">
+            <img src="https://img.shields.io/npm/dt/joplin-plugin-cmoptions?style=for-the-badge">
+        </td>
     </tr>
     <tr>
         <td>Built with:</td>
@@ -26,6 +32,12 @@
         <td>Inspired by:</td>
         <td>
             <a href="https://github.com/shantanugoel/joplin-plugin-cm-linenumbers">Joplin Line Numbers Plugin</a>
+        </td>
+    </tr>
+    <tr>
+        <td>Other plugins by me:</td>
+        <td>
+            <!--<a href="https://github.com/FelisDiligens/joplin-plugin-multimd-table-tools">-->MultiMarkdown Table Tools<!--</a>--> (WIP)
         </td>
     </tr>
 </table>
