@@ -9,7 +9,7 @@
             <img src="./assets/joplin.svg" width="64"><br>
             <p>
                 <strong>Joplin Plugin</strong><br>
-                CodeMirror Options
+                CodeMirror&nbsp;Options
             </p>
         </td>
     </tr>
