@@ -54,6 +54,7 @@ See the screenshots below:
 - Go to the settings (Tools → Options) → Plugins
 - Click the gear next to 'Manage your plugins' and choose 'Install from file'
 - Select the downloaded *.jpl file
+- Restart Joplin
 - Enjoy
 
 ## ⚡ Usage
