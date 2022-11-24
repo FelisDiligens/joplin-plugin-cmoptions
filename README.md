@@ -1,7 +1,7 @@
 <table>
     <tr>
         <td colspan="3" align="center">
-            <h3>CodeMirror options plugin</h3>
+            <h3>CodeMirror Options</h3>
         </td>
     </tr>
     <tr>
@@ -9,7 +9,7 @@
             <img src="./assets/joplin.svg" width="64"><br>
             <p>
                 <strong>Joplin Plugin</strong><br>
-                CodeMirror options plugin
+                CodeMirror Options
             </p>
         </td>
     </tr>
