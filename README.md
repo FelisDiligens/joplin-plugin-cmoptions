@@ -37,7 +37,7 @@
     <tr>
         <td>Other plugins by me:</td>
         <td>
-            <!--<a href="https://github.com/FelisDiligens/joplin-plugin-multimd-table-tools">-->MultiMarkdown Table Tools<!--</a>--> (WIP)
+            <a href="https://github.com/FelisDiligens/joplin-plugin-multimd-table-tools">MultiMarkdown Table Tools</a>
         </td>
     </tr>
 </table>
