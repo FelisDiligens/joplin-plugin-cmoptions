@@ -5,7 +5,7 @@
         </td>
     </tr>
     <tr>
-        <td rowspan="6" align="center">
+        <td rowspan="7" align="center">
             <img src="./assets/joplin.svg" width="64"><br>
             <p>
                 <strong>Joplin Plugin</strong><br>
@@ -20,6 +20,14 @@
         <td colspan="2">
             <img src="https://img.shields.io/npm/v/joplin-plugin-cmoptions?label=Version&style=for-the-badge">
             <img src="https://img.shields.io/npm/dt/joplin-plugin-cmoptions?style=for-the-badge">
+        </td>
+    </tr>
+    <tr>
+        <td>Links:</td>
+        <td>
+            <a href="https://www.npmjs.com/package/joplin-plugin-cmoptions">
+                <img src="https://img.shields.io/badge/-npm-9b3030?style=for-the-badge&logo=npm" alt="NPM">
+            </a>
         </td>
     </tr>
     <tr>
