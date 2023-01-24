@@ -65,7 +65,7 @@ See the screenshots below:
 ### From the repo (recommended)
 
 - Go to the settings (Tools → Options) → Plugins
-- Search for CodeMirror Options
+- Search for `CodeMirror Options`
 - Click 'Install' and restart Joplin
 - Enjoy
 
