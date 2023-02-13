@@ -53,6 +53,9 @@
 
 This is a simple plugin for [Joplin](https://joplinapp.org/) that exposes some CodeMirror options to the user, such as line wrapping or line numbers.
 
+> **Note**:
+> This plugin only affects the Markdown editor (CodeMirror), not the WYSIWYG editor (TinyMCE).
+
 See the screenshots below:
 
 ## 📸 Screenshots
