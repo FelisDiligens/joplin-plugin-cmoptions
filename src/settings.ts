@@ -7,11 +7,21 @@ import { SettingItemType } from 'api/types';
 */
 export async function getCMOptions() {
     return {
-        "lineWrapping": await joplin.settings.value('cmoptions_lineWrapping'),
-        "lineNumbers": await joplin.settings.value('cmoptions_lineNumbers'),
-        "showCursorWhenSelecting": await joplin.settings.value('cmoptions_showCursorWhenSelecting'),
-        "cursorBlinkRate": await joplin.settings.value('cmoptions_cursorBlinkRate'),
-        "resetSelectionOnContextMenu": await joplin.settings.value('cmoptions_resetSelectionOnContextMenu'),
+        "lineWrapping": await joplin.settings.value('cmoptions_lineWrapping') as boolean,
+        "lineNumbers": await joplin.settings.value('cmoptions_lineNumbers') as boolean,
+        "showCursorWhenSelecting": await joplin.settings.value('cmoptions_showCursorWhenSelecting') as boolean,
+        "cursorBlinkRate": await joplin.settings.value('cmoptions_cursorBlinkRate') as number,
+        "resetSelectionOnContextMenu": await joplin.settings.value('cmoptions_resetSelectionOnContextMenu') as boolean,
+    }
+}
+
+/**
+ * Return all settings that the plugin has registered.
+ */
+export async function getPluginSettings() {
+    return {
+        ...(await getCMOptions()),
+        "fixLineNumbersCSS": await joplin.settings.value('cmoptions_fixLineNumbersCSS') as boolean,
     }
 }
 
@@ -67,6 +77,14 @@ export async function registerAllSettings() {
             value: true,
             label: 'Reset selection on context menu',
             description: 'Controls whether, when the context menu is opened with a click outside of the current selection, the cursor is moved to the point of the click. Defaults to true.',
+        },
+        ['cmoptions_fixLineNumbersCSS']: {
+            public: true,
+            section: section,
+            type: SettingItemType.Bool,
+            value: false,
+            label: 'Fix line numbers (using CSS "hack")',
+            description: 'RESTART REQUIRED! When enabling line numbers and "Editor maximum width" at the same time, it causes display issues. Enable this option to load a CSS stylesheet to fix this issue.',
         },
     });
 }

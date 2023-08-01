@@ -1,0 +1,29 @@
+/*
+    Fix weirdness when enabling line numbers and "Editor maximum width".
+*/
+
+/*.CodeMirror-gutter {*/
+.CodeMirror-linenumbers {
+    /* Make the gutter stick to left: */
+    position: absolute !important;
+    left: 0 !important;
+    width: 32px;
+    /* For some reason, it loses it's background color: */
+    background-color: var(--joplin-background-color);
+}
+
+/* .CodeMirror-gutter-background {
+    width: 32px;
+    margin-left: -32px;
+} */
+
+.CodeMirror-lines {
+    /* Add space for the CodeMirror gutter: */
+    margin-left: 32px !important;
+}
+
+.CodeMirror-linenumber, .CodeMirror-gutter-elt {
+    /* Move the line number to the left, because we previously moved all lines to the right. */
+    position: absolute !important;
+    left: -32px !important;
+}
