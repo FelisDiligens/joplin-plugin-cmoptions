@@ -4,6 +4,17 @@
 
 import { PluginSettings } from "./settings";
 
+function showRelativeLines(cm) {
+    // Source: https://github.com/codemirror/codemirror5/issues/4116
+    const lineNum = cm.getCursor().line + 1;
+    if (cm.state.curLineNum === lineNum) {
+        return;
+    }
+    cm.state.curLineNum = lineNum;
+    cm.setOption('lineNumberFormatter', l =>
+        l === lineNum ? lineNum : Math.abs(lineNum - l));
+}
+
 module.exports = {
     default: function (context) {
         return {
@@ -30,6 +41,10 @@ module.exports = {
                             cm.setOption(key, value);
                         }
                     }
+
+                    // Apply relative line numbers:
+                    if (settings.relativeLineNumbers)
+                        cm.on('cursorActivity', showRelativeLines);
                 });
             },
 
