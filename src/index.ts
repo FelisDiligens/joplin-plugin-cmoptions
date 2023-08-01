@@ -3,7 +3,6 @@ import { ContentScriptType } from 'api/types';
 
 import {
     registerAllSettings,
-    getCMOptions,
     getPluginSettings
 } from './settings';
 
@@ -24,8 +23,8 @@ joplin.plugins.register({
 
         // Register a message, so our CodeMirror plugin can retrieve the user's preferences:
         await joplin.contentScripts.onMessage(CONTENT_SCRIPT_ID, async (message: any) => {
-            if (message.name === 'getCMOptions') {
-                return await getCMOptions();
+            if (message.name === 'getPluginSettings') {
+                return await getPluginSettings();
             }
             return "Error: " + message + " is not a valid message";
         });

@@ -1,27 +1,26 @@
 import joplin from 'api';
 import { SettingItemType } from 'api/types';
 
-/**
- * Returns all CodeMirror options the user can/has set.
- * See https://codemirror.net/5/doc/manual.html#config for all options.
-*/
-export async function getCMOptions() {
-    return {
-        "lineWrapping": await joplin.settings.value('cmoptions_lineWrapping') as boolean,
-        "lineNumbers": await joplin.settings.value('cmoptions_lineNumbers') as boolean,
-        "showCursorWhenSelecting": await joplin.settings.value('cmoptions_showCursorWhenSelecting') as boolean,
-        "cursorBlinkRate": await joplin.settings.value('cmoptions_cursorBlinkRate') as number,
-        "resetSelectionOnContextMenu": await joplin.settings.value('cmoptions_resetSelectionOnContextMenu') as boolean,
-    }
+export interface PluginSettings {
+    lineWrapping: boolean;
+    lineNumbers: boolean;
+    showCursorWhenSelecting: boolean;
+    cursorBlinkRate: number;
+    resetSelectionOnContextMenu: boolean;
+    fixLineNumbersCSS: boolean;
 }
 
 /**
  * Return all settings that the plugin has registered.
  */
-export async function getPluginSettings() {
+export async function getPluginSettings(): Promise<PluginSettings> {
     return {
-        ...(await getCMOptions()),
-        "fixLineNumbersCSS": await joplin.settings.value('cmoptions_fixLineNumbersCSS') as boolean,
+        "lineWrapping": await joplin.settings.value('cmoptions_lineWrapping'),
+        "lineNumbers": await joplin.settings.value('cmoptions_lineNumbers'),
+        "showCursorWhenSelecting": await joplin.settings.value('cmoptions_showCursorWhenSelecting'),
+        "cursorBlinkRate": await joplin.settings.value('cmoptions_cursorBlinkRate'),
+        "resetSelectionOnContextMenu": await joplin.settings.value('cmoptions_resetSelectionOnContextMenu'),
+        "fixLineNumbersCSS": await joplin.settings.value('cmoptions_fixLineNumbersCSS'),
     }
 }
 
