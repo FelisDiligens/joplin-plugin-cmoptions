@@ -2,28 +2,27 @@
     Fix weirdness when enabling line numbers and "Editor maximum width".
 */
 
-/*.CodeMirror-gutter {*/
-.CodeMirror-linenumbers {
-    /* Make the gutter stick to left: */
-    position: absolute !important;
-    left: 0 !important;
-    width: 32px;
-    /* For some reason, it loses it's background color: */
-    background-color: var(--joplin-background-color);
+/* Make the line numbers background stick to the left: */
+.CodeMirror-gutters {
+    left: 0px !important;
 }
 
-/* .CodeMirror-gutter-background {
-    width: 32px;
-    margin-left: -32px;
-} */
+/* We need to set the background-color of the line numbers for each theme: */
+.CodeMirror-linenumber { background-color: #f7f7f7; } /* light theme is default */
+.cm-s-material-darker .CodeMirror-linenumber { background-color: #212121; } /* dark and oled Joplin theme use same CM theme */
+.cm-s-solarized.cm-s-light .CodeMirror-linenumber { background-color: #eee8d5; }
+.cm-s-solarized.cm-s-dark .CodeMirror-linenumber { background-color: #073642; }
+.cm-s-dracula .CodeMirror-linenumber { background-color: #282a36; }
+.cm-s-nord .CodeMirror-linenumber { background-color: #2e3440; }
+.cm-s-monokai .CodeMirror-linenumber { background-color: #272822; }
 
-.CodeMirror-lines {
-    /* Add space for the CodeMirror gutter: */
-    margin-left: 32px !important;
+/* Add space for the line numbers by moving all lines to the right: */
+.CodeMirror-sizer {
+    padding-left: 40px;
 }
 
-.CodeMirror-linenumber, .CodeMirror-gutter-elt {
-    /* Move the line number to the left, because we previously moved all lines to the right. */
-    position: absolute !important;
-    left: -32px !important;
+/* Move the actual line numbers (which are connected to the lines) back to the left again: */
+/* .CodeMirror-linenumber, */
+.CodeMirror-gutter-wrapper, .CodeMirror-gutter-background {
+    margin-left: -40px;
 }
