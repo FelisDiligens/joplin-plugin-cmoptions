@@ -60,8 +60,17 @@ See the screenshots below:
 
 ## 📸 Screenshots
 
+#### Options
+
 ![](assets/options.png)
+
+#### Line numbers
+
 ![](assets/line_numbers.png)
+
+#### Vim-like relative line numbers
+
+![](assets/relative_line_numbers.png)
 
 ## ⚙️ Installation
 
