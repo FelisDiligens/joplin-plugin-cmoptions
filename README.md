@@ -1,3 +1,7 @@
+> [!IMPORTANT]
+> This plugin was written for CodeMirror 5 and isn't compatible with CodeMirror 6 (which is the default since Joplin 3.1.x).  
+> For the new CodeMirror version, I recommend this plugin: [Extended Markdown editor settings](https://github.com/personalizedrefrigerator/joplin-plugin-extra-editor-settings)
+
 <table>
     <tr>
         <td colspan="3" align="center">
